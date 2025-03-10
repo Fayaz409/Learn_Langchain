@@ -22,12 +22,16 @@ texts = splitter.split_documents(text)
 embedding_model = GoogleGenerativeAIEmbeddings(google_api_key=os.getenv('GEMINI_API_KEY'), model="models/text-embedding-004")
 
 vector_db = FAISS.from_documents(texts, embedding_model)
-results = vector_db.similarity_search(
-    "The Legacy of a Shepherd",
-    k=2,
-)
+# results = vector_db.similarity_search(
+#     "The Legacy of a Shepherd",
+#     k=2,
+# )
 
-print('Results\n',results)
+
+retriever = vector_db.as_retriever(search_type="mmr", search_kwargs={"k": 2})
+print(retriever.invoke("The Legacy of a Shepherd"))
+
+# print('Results\n',results)
 # embeddings_ = embeddings.embed_documents([doc.page_content for doc in texts])
 # print(embeddings_)
 
