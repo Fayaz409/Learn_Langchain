@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "age": 30,
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      },
+      "hobbies": ["reading", "gaming", "coding"]
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "age": 28,
+      "address": {
+        "street": "456 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+      },
+      "hobbies": ["hiking", "photography"]
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 1001,
+      "user_id": 1,
+      "items": [
+        {"product": "Laptop", "price": 999.99},
+        {"product": "Mouse", "price": 29.99}
+      ],
+      "total": 1029.98
+    }
+  ]
+}
