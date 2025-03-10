@@ -1,0 +1,10 @@
+Planet,Diameter_km,Number_of_Moons,Orbital_Period_Days,Interesting_Fact
+Mercury,4879,0,88,"Closest planet to the Sun with extreme temperature fluctuations."
+Venus,12104,0,225,"Rotates in the opposite direction of most planets, giving it a unique day–night cycle."
+Earth,12742,1,365.25,"The only planet known to support life, with a protective atmosphere and liquid water."
+Mars,6779,2,687,"Home to Olympus Mons, the largest volcano in the solar system."
+Jupiter,139820,79,4333,"The largest planet, famous for its Great Red Spot—a massive, centuries-old storm."
+Saturn,116460,82,10759,"Known for its extensive and striking ring system composed of ice and rock."
+Uranus,50724,27,30687,"Rotates on its side, likely due to a massive ancient collision."
+Neptune,49244,14,60190,"The windiest planet, with winds reaching speeds over 2100 km/h."
+Pluto,2370,5,90560,"Reclassified as a dwarf planet in 2006, featuring a distinctive heart-shaped glacier."
