@@ -1,6 +1,7 @@
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.runnables import RunnablePassthrough,RunnableLambda,RunnableParallel
 from dotenv import load_dotenv
 import os
 
@@ -16,9 +17,15 @@ llm = ChatGroq(
     api_key=os.getenv('GROQ_API_KEY'),
 )
 
+def russian(name):
+    return f"Привет, {name}!"
+
 output_parser = StrOutputParser()
 # Create a chain with the prompt and the parser, this pipe (|) is called a Runnble in LCEL
-chain = prompt| llm | output_parser
+# RunnalePassthrough is a Runnable that just passes the input to the next Runnable
+# RunnaleLambda is a Runnable that runs a lambda function
+chain = RunnablePassthrough() | RunnableLambda(russian) 
 
-res = chain.invoke({'soccer_player':'Lionel Messi'})
+res = chain.invoke('Lionel Messi')
 print(res)
+
